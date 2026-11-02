@@ -1,9 +1,6 @@
 /* Part 3: vanilla JavaScript, no build step or frameworks.
-   Contact emails are delivered by Formspree. The endpoint lives in contact.html's
-   form action; replace YOUR_FORM_ID there (see README). Never add passwords or secrets.
-   ACTION REQUIRED: set the recipient below to the approved public email address that
-   receives contact messages (the same address used for your Formspree form). */
-const contactRecipient = '';
+   Contact emails are delivered by Formspree.  */
+const contactRecipient = 'ST10476294@rcconnect.edu.za';
 
 // Navigation remains visible if JavaScript is unavailable.
 const menuButton = document.querySelector('.menu-toggle');
