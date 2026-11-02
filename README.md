@@ -181,32 +181,6 @@ No prices, stock levels or discounts are invented.
 - **Success**, with the user's name and email, and the form resets;
 - **Error**, with the message kept on screen, a retry option and a "Send with my email app" mailto link to the recipient stated in `script.js` (`contactRecipient`).
 
-A 15-second timeout prevents a stuck "Sending…" state. Formspree emails each submission to the account owner.
-
-> ⚠ **Until the Formspree ID is added, the form validates and compiles the message but tells the user honestly that it was not sent.**
-
----
-
-
-## GitHub Pages Deployment — ACTION REQUIRED
-The website files are at the **repository root**, so GitHub Pages serves from the root. All paths are relative and lowercase, so the site works under `https://st10476294.github.io/WEDE5020/`.
-
-1. Complete the Formspree steps above.
-2. Commit those changes and push them to the `main` branch of https://github.com/ST10476294/WEDE5020.
-3. Open the repository on GitHub.
-4. Go to **Settings**.
-5. Select **Pages** in the left menu.
-6. Under **Build and deployment → Source**, choose **Deploy from a branch**.
-7. Choose branch **`main`** and folder **`/ (root)`**.
-8. Click **Save**.
-9. Wait 1–3 minutes until GitHub shows "Your site is live at https://st10476294.github.io/WEDE5020/". (If the repository is private, your GitHub plan must allow Pages for private repositories; otherwise ask your lecturer or use Netlify.)
-10. Open every public page: Home, Fragrance, Rituals, Reviews, Enquiry, Contact.
-11. Check that CSS, JavaScript, images, maps and favicon load (DevTools → Console shows no errors).
-12. Copy the final URL.
-13. `robots.txt`, `sitemap.xml` and the top of this README already use `https://st10476294.github.io/WEDE5020/`. If GitHub shows a different URL, replace it in those three files.
-14. Commit and push any URL corrections (e.g. `seo: correct live URL in sitemap and robots`).
-15. Wait for Pages to redeploy and recheck the site, including `/robots.txt` and `/sitemap.xml`.
-
 
 
 ---
