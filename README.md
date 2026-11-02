@@ -5,7 +5,7 @@
 - **Student Number:** ST10476294
 - **Module:** Web Development (Introduction) — WEDE5020
 - **Assessment:** Portfolio of Evidence (POE), Parts 1–3
-- **Live website:** https://st10476294.github.io/WEDE5020/ _(expected GitHub Pages URL — ACTION REQUIRED: confirm it works after enabling Pages)_
+- **Live website:** https://st10476294.github.io/WEDE5020/Sol%20de%20janeiro/index.html
 - **Repository:** https://github.com/ST10476294/WEDE5020
 
 > This is a student project. It is not the official Sol de Janeiro website.
