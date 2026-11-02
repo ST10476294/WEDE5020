@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fragrance Collection | Sol de Janeiro</title>
+    <meta name="description" content="Search and sort the Cheirosa 62 and Cheirosa 40 fragrances by scent note, view enlarged product images and learn about Brazilian Bum Bum Cream.">
+    <meta name="keywords" content="Sol de Janeiro, Cheirosa 62, Cheirosa 40, fragrance collection, Brazilian Bum Bum Cream, scent notes">
+    <link rel="icon" href="icons/sun-2-svgrepo-com.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header>
+        <p class="brand">Sol de Janeiro</p>
+        <button class="menu-toggle" type="button" aria-expanded="true" aria-controls="main-nav" hidden>Menu</button>
+        <nav id="main-nav" aria-label="Main navigation">
+
+            <a href="index.html">Home</a>
+            <a href="fragrance.html" aria-current="page">Fragrance Collection</a>
+            <a href="howto.html">Beauty Rituals</a>
+            <a href="enquiry.html">Newsletter & Offers</a>
+            <a href="contact.html">Locations & Contact</a>
+
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section>
+            <h1>Discover Our Sun-Kissed Fragrance Collection</h1>
+            <p>Immerse yourself in our captivating range of Brazilian-inspired fragrances, each bottle capturing the
+                essence of Rio's golden beaches and tropical warmth.</p>
+            <img src="images/sol-de-janeiro-fragrance-collection.jpeg" alt="Main Sol de Janeiro fragrance collection display" width="452" height="678" loading="lazy">
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Our Signature Cheirosa Fragrances</h2>
+            <div id="search-tools" hidden>
+                <label for="product-search">Search fragrances or scent notes</label>
+                <input type="search" id="product-search" name="search" placeholder="Try vanilla or Cheirosa 62">
+                <label for="product-sort">Sort fragrances</label>
+                <select id="product-sort" name="sort"><option value="featured">Featured order</option><option value="az">Name A–Z</option><option value="za">Name Z–A</option></select>
+                <p id="search-status" role="status" aria-live="polite"></p>
+            </div><div id="product-list" class="product-list">
+
+            <article>
+                <h3>Cheirosa 62</h3>
+                <p>Best-selling scent combining pistachio and salted caramel with warm vanilla.</p>
+                <img src="images/cheirosa-62-fragrance.jpeg" alt="Cheirosa 62 Fragrance Bottle" width="488" height="488" loading="lazy">
+            </article>
+
+            <article>
+                <h3>Cheirosa 40</h3>
+                <p>A blend of black amber plum and vanilla woods, embodying Brazilian nights.</p>
+                <img src="images/cheirosa-40-fragrance.jpeg" alt="Cheirosa 40 Fragrance Bottle" width="387" height="516" loading="lazy">
+            </article>
+            </div>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>The Brazilian Bum Bum Story</h2>
+            <img src="images/brazilian-bum-bum-cream.jpeg" alt="Jar of Brazilian Bum Bum Cream" width="225" height="225" loading="lazy">
+            <p>Our iconic Brazilian Bum Bum Cream was inspired by the confidence and body positivity of Brazilian beach
+                culture. This cult favourite combines powerful ingredients for visibly smoother, tighter-looking skin.
+            </p>
+            <ul>
+                <li><strong>Guaraná</strong> - stimulates circulation and energises skin</li>
+                <li><strong>Cupuaçu Butter</strong> - deeply moisturises and improves elasticity</li>
+                <li><strong>Açaí Oil</strong> - rich in antioxidants for skin protection</li>
+            </ul>
+        </section>
+        <p><a href="enquiry.html">Ask about a product</a> or <a href="howto.html">explore fragrance layering</a>.</p>
+        <dialog id="lightbox" aria-labelledby="lightbox-caption">
+            <button id="lightbox-close" type="button" autofocus>Close image</button>
+            <img id="lightbox-image" alt="">
+            <p id="lightbox-caption"></p>
+        </dialog>
+    </main>
+
+    <footer>
+        <p class="project-note">Student project — not the official Sol de Janeiro website.</p>
+        <p>&copy; 2026 Sol de Janeiro. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>

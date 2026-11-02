@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enquiries & Newsletter | Sol de Janeiro</title>
+    <meta name="description" content="Send a Sol de Janeiro product, newsletter or brand partnership enquiry and get instant guidance on stockists, availability and next steps.">
+    <meta name="keywords" content="Sol de Janeiro, product enquiry, newsletter, brand partnership, influencer collaboration, product availability">
+    <link rel="icon" href="icons/sun-2-svgrepo-com.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header>
+        <p class="brand">Sol de Janeiro</p>
+        <button class="menu-toggle" type="button" aria-expanded="true" aria-controls="main-nav" hidden>Menu</button>
+        <nav id="main-nav" aria-label="Main navigation">
+
+            <a href="index.html">Home</a>
+            <a href="fragrance.html">Fragrance Collection</a>
+            <a href="howto.html">Beauty Rituals</a>
+            <a href="enquiry.html" aria-current="page">Newsletter & Offers</a>
+            <a href="contact.html">Locations & Contact</a>
+
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section>
+            <h1>Join Our Beauty Community</h1>
+            <p>Become part of our Brazilian beauty community and receive insider access to new launches, exclusive
+                discounts, and expert skincare tips. Complete the form below to ask about a product, our newsletter or a brand
+                partnership, and you will receive instant guidance on your next steps.</p>
+
+            <!-- Standard HTML5 Form for Enquiries -->
+            <form id="enquiry-form" action="enquiry.html" method="post">
+<p>Fields marked * are required.</p>
+<div class="form-field"><label for="fullName">Full name *</label><input type="text" id="fullName" aria-describedby="fullName-error" name="fullName" required minlength="2" maxlength="80" autocomplete="name"><span class="field-error" id="fullName-error"></span></div>
+<div class="form-field"><label for="email">Email address *</label><input type="email" id="email" aria-describedby="email-error" name="email" required maxlength="254" autocomplete="email"><span class="field-error" id="email-error"></span></div>
+<div class="form-field"><label for="enquiryType">Enquiry type *</label><select id="enquiryType" aria-describedby="enquiryType-error" name="enquiryType" required><option value="">Choose an option</option><option value="newsletter">Newsletter information</option><option value="product">Product enquiry</option><option value="partnership">Brand partnership / influencer</option></select><span class="field-error" id="enquiryType-error"></span></div>
+<div class="form-field"><label for="product">Product of interest *</label><select id="product" aria-describedby="product-error" name="product" required><option value="">Choose an option</option><option value="cheirosa62">Cheirosa 62</option><option value="cheirosa40">Cheirosa 40</option><option value="cream">Brazilian Bum Bum Cream</option><option value="general">General / not applicable</option></select><span class="field-error" id="product-error"></span></div>
+<div class="form-field"><label for="details">Enquiry details *</label><textarea id="details" aria-describedby="details-error" name="details" rows="5" required minlength="10" maxlength="1500"></textarea><span class="field-error" id="details-error"></span></div>
+<button type="submit" disabled>Submit enquiry</button>
+<noscript><p>Enable JavaScript to validate this form and see your enquiry response.</p></noscript>
+<p id="enquiry-status" role="status" aria-live="polite" tabindex="-1"></p>
+<div id="enquiry-result" class="form-result" hidden></div>
+</form>
+        </section>
+    </main>
+
+    <footer>
+        <p class="project-note">Student project — not the official Sol de Janeiro website.</p>
+        <p>&copy; 2026 Sol de Janeiro. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>

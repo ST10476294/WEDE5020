@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# GitHub Pages URL for github.com/ST10476294/WEDE5020. Update if the site is hosted elsewhere.
+Sitemap: https://st10476294.github.io/WEDE5020/sitemap.xml
