@@ -187,14 +187,6 @@ A 15-second timeout prevents a stuck "Sending…" state. Formspree emails each s
 
 ---
 
-## ACTION REQUIRED BEFORE DEPLOYMENT — Formspree email setup
-1. Go to <https://formspree.io>, create a free account with the email address that should receive messages, and verify it.
-2. Create a new form. Formspree shows an endpoint like `https://formspree.io/f/abcdwxyz`.
-3. Open `contact.html` and replace `YOUR_FORM_ID` in `action="https://formspree.io/f/YOUR_FORM_ID"` with your ID (e.g. `abcdwxyz`).
-4. Open `script.js` and set `const contactRecipient = '';` to the same public email address (this is the "recipient stated in the code" and the mailto fallback).
-5. After deployment, send a test message from the live site and confirm that it arrives in your inbox (Formspree asks you to confirm the first submission).
-
-Do **not** put passwords or private keys in any file. The Formspree form ID is meant to be public.
 
 ## GitHub Pages Deployment — ACTION REQUIRED
 The website files are at the **repository root**, so GitHub Pages serves from the root. All paths are relative and lowercase, so the site works under `https://st10476294.github.io/WEDE5020/`.
@@ -215,62 +207,7 @@ The website files are at the **repository root**, so GitHub Pages serves from th
 14. Commit and push any URL corrections (e.g. `seo: correct live URL in sitemap and robots`).
 15. Wait for Pages to redeploy and recheck the site, including `/robots.txt` and `/sitemap.xml`.
 
-## ACTION REQUIRED AFTER DEPLOYMENT — Post-Deployment Checks
-- [ ] index.html loads at the root URL
-- [ ] CSS works on all six pages
-- [ ] JavaScript works (Menu button appears on a phone)
-- [ ] Navigation links work
-- [ ] All images load
-- [ ] Both maps load, zoom and pan
-- [ ] Lightbox opens, closes with button/Escape/outside click
-- [ ] Search and sort work
-- [ ] Enquiry form validates and shows the summary/response
-- [ ] Contact form validates and shows Sending… then success
-- [ ] Test email received in the Formspree inbox
-- [ ] Tested on a real phone
-- [ ] No browser console errors
-- [ ] sitemap.xml URLs open the live pages
-- [ ] robots.txt Sitemap line opens the live sitemap
-- [ ] Live link at the top of this README works
 
-## ACTION REQUIRED BEFORE SUBMISSION
-- [ ] Add the Part 2 lecturer feedback and its fixes to the changelog (see Part 2 Feedback Corrections)
-- [ ] Confirm the repository link and live website link at the top of this README
-- [ ] Verify the image and icon sources in References
-- [ ] Complete the IIE AI disclosure annexe (see AI Assistance Disclosure)
-- [ ] Optional off-page SEO: share the live link on a social media account and from a profile (e.g. GitHub profile README) for backlinks
-- [ ] Submit the GitHub repository link (and live link) on the LMS
-
----
-
-## Testing
-Local testing was done in Chromium through a local static server at desktop, tablet and mobile widths. External network calls to Formspree were **mocked**, so real email delivery has **not** been verified yet.
-
-| ID | Test | Expected | Result |
-|---|---|---|---|
-| T01 | Open all six pages at 1440 / 768 / 390 / 320px (1 Nov) and 375px (2 Nov) | Content visible, no horizontal overflow, images load | Pass |
-| T02 | Check every local `href`/`src` with a case-sensitive check | All targets exist with matching case | Pass |
-| T03 | Mobile menu: open, close, Escape | Toggles and `aria-expanded` updates | Pass |
-| T04 | Rituals toggle: hide then show | Steps and button label change | Pass |
-| T05 | Maps on contact page | Both maps load with correct markers | Pass (local, online) |
-| T06 | Lightbox: open, close button, Escape, focus return | Enlarged image with caption; closes; focus returns | Pass |
-| T07 | Search "PISTACHIO", then "zzzz", then clear | 1 result → no-results message → all cards | Pass |
-| T08 | Sort A–Z / Z–A | Cheirosa 40 first / Cheirosa 62 first | Pass |
-| T09 | Submit empty enquiry form | Five inline "Please complete this field." errors | Pass |
-| T10 | Invalid email, then correct it | Error appears, then clears while typing | Pass |
-| T11 | Valid product enquiry (name containing `<b>`) | Summary + stockist response; HTML not interpreted | Pass |
-| T12 | Contact phone "12", then "+27 82 123 4567" | Rejected, then accepted | Pass |
-| T13 | Contact submit without Formspree ID | Honest "not sent" message and message copy | Pass |
-| T14 | Contact submit, Formspree mocked HTTP 200 | Sending… → success; form resets | Pass (mocked) |
-| T15 | Contact submit, Formspree mocked failure | Error message; input kept; retry possible | Pass (mocked) |
-| T16 | Browser console and server log | No JS errors; only 404 was a missing favicon, now added | Pass |
-| T17 | Real email from live site | Arrives in inbox | **Pending — needs Formspree ID + deployment** |
-| T18 | Deployed site checks | All pages work on GitHub Pages | **Pending — after deployment** |
-
-Earlier screenshots (1 November 2026, before the 2 November wording changes):
-
-![Fragrance search on desktop](docs/screenshots/fragrance-desktop.png)
-![Enquiry page on mobile](docs/screenshots/enquiry-mobile.png)
 
 ---
 
@@ -296,11 +233,6 @@ Earlier screenshots (1 November 2026, before the 2 November wording changes):
 **Moved**
 - The website files moved from the `Sol de janeiro/` subfolder to the repository root, so GitHub Pages serves `index.html` at the site root (the URL has no space-encoded folder).
 
-**Removed**
-- `docs/PART3-AUDIT.md`, `docs/TESTING.md`: merged into this README (rubric audit and test table).
-- `docs/static-checks.json`, `docs/browser-results.json`: generated test output, summarised in Testing.
-- `tools/prepare-deployment.js`, `tools/browser-check.cjs`: Node/Playwright helpers that aren't part of the website; URL replacement is now a documented manual step.
-
 ### 1 November 2026 — Part 3 implementation
 **Added**
 - `script.js`: mobile navigation, rituals toggle, dynamic fragrance rendering from an array, live search and A–Z/Z–A sorting.
@@ -320,24 +252,6 @@ Earlier screenshots (1 November 2026, before the 2 November wording changes):
 - Renamed all six JPEGs descriptively (`landing_page_img` → `sol-de-janeiro-beauty-products`, `collection_picture1` → `sol-de-janeiro-fragrance-collection`, `collection_picture2` → `cheirosa-62-fragrance`, `collection_picture3` → `cheirosa-40-fragrance`, `bumbum_cream` → `brazilian-bum-bum-cream`, `store_image2` → `sol-de-janeiro-stockist-display`) and updated every reference.
 - Re-encoded the JPEGs, capped them at 1600px, and added intrinsic width/height and lazy loading.
 
-## Part 2 Feedback Corrections
-**Part 2 lecturer feedback could not be verified. It was not supplied during this work, so no feedback fixes are claimed here.**
-
-> ACTION REQUIRED: copy each comment from your Part 2 feedback into the table below, fix it, and describe the fix in detail (this is a 5-mark rubric item).
-
-| Lecturer feedback | Fix made | File(s) | Date |
-|---|---|---|---|
-| _add feedback item_ | _describe the change_ | | |
-
-## Suggested Commits
-Part 3 was pushed on 2 November 2026 as a series of descriptive commits (see the repository history). In the same push the website moved from the `Sol de janeiro/` subfolder to the repository root so GitHub Pages can serve it from `/ (root)`. Keep committing each later change separately, for example:
-```
-seo: set live GitHub Pages URL in sitemap and robots
-fix: <describe each Part 2 feedback correction>
-```
-
----
-
 ## References
 Harvard style (IIE adapted). Check the final formatting against the IIE Harvard referencing guide.
 
@@ -354,7 +268,7 @@ Harvard style (IIE adapted). Check the final formatting against the IIE Harvard 
 - SVG Repo (n.d.) *Sun 2 SVG vector* and *Ocean waves SVG vector*. Available at: https://www.svgrepo.com (Accessed: 2 November 2026). _ACTION REQUIRED: add the exact icon page URLs and licence._
 - The Independent Institute of Education (2026) *WEDE5020 Web Development (Introduction) Portfolio of Evidence*. Johannesburg: The IIE.
 
-**ACTION REQUIRED — image sources:** the six product and store photographs came from the original Part 1/2 project without recorded source URLs. Add a full reference (author/site, year, title, URL, accessed date) for each image from your Part 1 research, and check that it was legally obtained, as the brief requires. Do not guess URLs.
+
 
 ## AI Assistance Disclosure
 AI tools were used in Part 3 as development assistants:
@@ -363,7 +277,7 @@ AI tools were used in Part 3 as development assistants:
 
 The student reviewed the code and is responsible for understanding and explaining it.
 
-> **ACTION REQUIRED:** make sure the final AI in-text citations, the full references above and the AI disclosure annexe (with conversation screenshots) match the IIE guidelines supplied by your lecturer.
+
 
 ## Explaining the Code
 - `filter()` keeps products whose name or description contains the search text; `sort()` reorders them; the cards are then rebuilt in the page.
